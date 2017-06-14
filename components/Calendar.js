@@ -241,7 +241,7 @@ export default class Calendar extends Component {
         days.push((
           <Day
              startOfMonth={startOfArgMoment}
-             isWeekend={isoWeekday === 0 || isoWeekday === 6}
+             isWeekend={isoWeekday === 5 || isoWeekday === 6}
              key={`${renderIndex}`}
              onPress={() => {
                this.selectDate(thisMoment);

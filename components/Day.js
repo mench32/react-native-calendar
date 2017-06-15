@@ -55,9 +55,9 @@ export default class Day extends Component {
     if (isToday && !isSelected) {
       dayTextStyle.push(styles.currentDayText, customStyle.currentDayText);
     } else if (isToday || isSelected) {
-      dayTextStyle.push(styles.selectedDayText, customStyle.selectedDayText);
+      dayTextStyle.push(styles.selectedDayText, customStyle.currentSelectedDayText);
     } else if (isWeekend) {
-      dayTextStyle.push(styles.weekendDayText, customStyle.weekendDayText);
+      dayTextStyle.push(styles.weekendDayText, customStyle.weekendDayText, customStyle.weekendSelectedDayText);
     }
 
     if (event) {

@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
   selectedEventIndicator: {
     display: 'none'
   },
-
   dayCircleFiller: {
     justifyContent: 'center',
     backgroundColor: 'transparent',
@@ -88,6 +87,7 @@ const styles = StyleSheet.create({
   },
   currentDayCircle: {},
   currentDayText: {},
+  currentSelectedDayText: {},
   selectedDayCircle: {},
   hasEventCircle: {},
   hasEventDaySelectedCircle: {},
@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
   hasEventSelectedText: {},
   selectedDayText: {},
   weekendDayText: {},
+  weekendSelectedDayText: {}
 });
 
 export default styles;

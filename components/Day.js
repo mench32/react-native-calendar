@@ -91,12 +91,15 @@ export default class Day extends Component {
             <Text style={this.dayTextStyle(isWeekend, isSelected, isToday, event)}>{caption}</Text>
           </View>
           {showEventIndicators &&
-            <View style={[
-              styles.eventIndicatorFiller,
-              customStyle.eventIndicatorFiller,
-              event && styles.eventIndicator,
-              event && customStyle.eventIndicator,
-              event && event.eventIndicator]}
+            <View
+                style={[
+                  styles.eventIndicatorFiller,
+                  customStyle.eventIndicatorFiller,
+                  event && styles.eventIndicator,
+                  event && customStyle.eventIndicator,
+                  event && event.eventIndicator,
+                  event && isSelected && customStyle.selectedEventIndicator,
+           ]}
             />
           }
         </View>

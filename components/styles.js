@@ -75,6 +75,10 @@ const styles = StyleSheet.create({
   eventIndicator: {
     backgroundColor: '#cccccc',
   },
+  selectedEventIndicator: {
+    backgroundColor: '#cccccc',
+  },
+
   dayCircleFiller: {
     justifyContent: 'center',
     backgroundColor: 'transparent',

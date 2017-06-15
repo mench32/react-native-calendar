@@ -86,21 +86,15 @@ const styles = StyleSheet.create({
     height: 28,
     borderRadius: 14,
   },
-  currentDayCircle: {
-    backgroundColor: 'red',
-  },
-  currentDayText: {
-    color: 'red',
-  },
+  currentDayCircle: {},
+  currentDayText: {},
   selectedDayCircle: {},
   hasEventCircle: {},
   hasEventDaySelectedCircle: {},
   hasEventText: {},
   hasEventSelectedText: {},
   selectedDayText: {},
-  weekendDayText: {
-    color: '#ccc',
-  },
+  weekendDayText: {},
 });
 
 export default styles;

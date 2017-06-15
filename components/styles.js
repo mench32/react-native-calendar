@@ -95,12 +95,10 @@ const styles = StyleSheet.create({
   selectedDayCircle: {
     backgroundColor: 'black',
   },
-  hasEventCircle: {
-  },
-  hasEventDaySelectedCircle: {
-  },
-  hasEventText: {
-  },
+  hasEventCircle: {},
+  hasEventDaySelectedCircle: {},
+  hasEventText: {},
+  hasEventSelectedText: {},
   selectedDayText: {
     color: 'white',
     fontWeight: 'bold',

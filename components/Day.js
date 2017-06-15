@@ -9,9 +9,10 @@ import {
 import styles from './styles';
 
 export default class Day extends Component {
+
   static defaultProps = {
     customStyle: {},
-  }
+  };
 
   static propTypes = {
     caption: PropTypes.any,
@@ -23,7 +24,7 @@ export default class Day extends Component {
     isWeekend: PropTypes.bool,
     onPress: PropTypes.func,
     showEventIndicators: PropTypes.bool,
-  }
+  };
 
   dayCircleStyle = (isWeekend, isSelected, isToday, event) => {
     const { customStyle } = this.props;
@@ -45,7 +46,7 @@ export default class Day extends Component {
       }
     }
     return dayCircleStyle;
-  }
+  };
 
   dayTextStyle = (isWeekend, isSelected, isToday, event) => {
     const { customStyle } = this.props;
@@ -62,8 +63,13 @@ export default class Day extends Component {
     if (event) {
       dayTextStyle.push(styles.hasEventText, customStyle.hasEventText, event.hasEventText)
     }
+
+    if (isSelected && event) {
+      dayTextStyle.push(customStyle.hasEventSelectedText)
+    }
+
     return dayTextStyle;
-  }
+  };
 
   render() {
     let { caption, customStyle } = this.props;

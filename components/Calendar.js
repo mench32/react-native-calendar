@@ -288,7 +288,7 @@ export default class Calendar extends Component {
       headings.push(
         <Text
            key={i}
-           style={j === 0 || j === 6 ?
+           style={j === 5 || j === 6 ?
                   [styles.weekendHeading, this.props.customStyle.weekendHeading] :
            [styles.dayHeading, this.props.customStyle.dayHeading]}
            >

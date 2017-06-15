@@ -52,20 +52,25 @@ export default class Day extends Component {
     const { customStyle } = this.props;
     const dayTextStyle = [styles.day, customStyle.day];
 
-    if (isToday && !isSelected) {
+    if (isToday) {
       dayTextStyle.push(styles.currentDayText, customStyle.currentDayText);
-    } else if (isToday || isSelected) {
-      dayTextStyle.push(styles.selectedDayText, customStyle.currentSelectedDayText);
-    } else if (isWeekend) {
-      dayTextStyle.push(styles.weekendDayText, customStyle.weekendDayText, customStyle.weekendSelectedDayText);
+      if (isSelected) {
+        dayTextStyle.push(styles.currentSelectedDayText, customStyle.currentSelectedDayText);
+      }
+    }
+
+    if (isWeekend) {
+      dayTextStyle.push(styles.weekendDayText, customStyle.weekendDayText);
+      if (isSelected) {
+        dayTextStyle.push(styles.weekendSelectedDayText, customStyle.weekendSelectedDayText);
+      }
     }
 
     if (event) {
       dayTextStyle.push(styles.hasEventText, customStyle.hasEventText, event.hasEventText)
-    }
-
-    if (isSelected && event) {
-      dayTextStyle.push(customStyle.hasEventSelectedText)
+      if (isSelected) {
+        dayTextStyle.push(styles.hasEventText, customStyle.hasEventSelectedText)
+      }
     }
 
     return dayTextStyle;
